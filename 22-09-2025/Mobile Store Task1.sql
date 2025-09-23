@@ -14,4 +14,4 @@ SELECT SUM(Stock)
 FROM mobiles;
 SELECT * FROM mobiles
 ORDER BY Price DESC
-LIMIT 2;
+LIMIT 3;
