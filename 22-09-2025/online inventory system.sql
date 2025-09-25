@@ -19,3 +19,5 @@ ALTER TABLE books
 ADD published_year int NOT null;
 
 TRUNCATE TABLE books;
+
+DROP DATABASE BookStoreDB;
