@@ -27,12 +27,16 @@ ON books.book_id = borrowers.book_id;
 
 SELECT books.title, borrowers.name
 FROM borrowers
-RIGHT JOIN books
-ON books.book_id = borrowers.book_id
-WHERE borrowers.book_id IS NOT null;
+LEFT JOIN books
+ON books.book_id = borrowers.book_id;
 
-SELECT books.book_id, books.title
+SELECT books.book_id, books.title 
 FROM books
 LEFT JOIN borrowers
 ON books.book_id = borrowers.book_id
 WHERE borrowers.book_id IS null;
+
+SELECT borrowers.borrower_id, borrowers.name, books.title
+FROM borrowers
+LEFT JOIN books
+ON books.book_id = borrowers.book_id;
