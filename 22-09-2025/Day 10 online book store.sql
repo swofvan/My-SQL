@@ -3,7 +3,7 @@ CREATE TABLE `authors` (
        Author_name text NOT null,
        Email_address text NOT null,
        UNIQUE (Email_address)
-       );
+);
 
 CREATE TABLE `books` (
        Book_ID int NOT null,
