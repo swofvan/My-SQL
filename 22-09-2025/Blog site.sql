@@ -31,15 +31,15 @@ VALUES (3, 'My First Blog', 'This is the content of my first blog post.', '13-10
 
 -- comments table
 
-#CREATE TABLE Comments (
-#    id int PRIMARY KEY AUTO_INCREMENT NOT null,
-#    blog_id int NOT NULL,
-#    user_id int NOT NULL,
-#    comment_text varchar(100),
-#    `date` varchar(100),
-#    FOREIGN KEY (blog_id) REFERENCES blogs(id),
-#    FOREIGN KEY (user_id) REFERENCES `User`(id)
-#    );
+CREATE TABLE Comments (
+    id int PRIMARY KEY AUTO_INCREMENT NOT null,
+    blog_id int NOT NULL,
+    user_id int NOT NULL,
+    comment_text varchar(100),
+    `date` varchar(100),
+    FOREIGN KEY (blog_id) REFERENCES blogs(id),
+    FOREIGN KEY (user_id) REFERENCES `User`(id)
+    );
     
 INSERT INTO comments (blog_id, user_id, comment_text,`date`)
 VALUES (101, 1, 'Great post, John!', '14-10-2025'),
